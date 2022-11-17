@@ -32,7 +32,6 @@ variable "location" {
 variable "virtual_network_name" {
   type = string
   description = "Virtual Network Name @brownfield#Azure:VirtualNetwork(dependsOn: resource_group)"
-  default = "smazurevmwsvn"
 }
 variable "address_space" {
   type = list(string)
