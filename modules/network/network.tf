@@ -10,8 +10,8 @@
 # }
 
 data "azurerm_subnet" "test" {
-  name                 = "${var.vm_name}-${var.resource_type}"
+  name                 = "${var.virtual_network_name}"
   resource_group_name  = var.resource_group
-  virtual_network_name = "${var.vm_name}-${var.resource_type}"
+  virtual_network_name = "${var.virtual_network_name}"
   # address_prefixes     = var.address_prefixes
 }
