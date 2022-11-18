@@ -34,17 +34,6 @@ module "network" {
   isproduction         = var.isproduction
 }
 
-module "nsg-test" {
-  source                = "./modules/networksecuritygroup"
-  location              = var.location
-  vm_name               = join("-", [var.vm_name, random_string.random.id])
-  resource_type         = "NSG"
-  resource_group        = var.resource_group
-  subnet_id             = module.network.subnet_id_test
-  address_prefixes      = var.address_prefixes
-  isproduction         = var.isproduction
-}
-
 module "publicip" {
   source           = "./modules/publicip"
   location         = var.location
