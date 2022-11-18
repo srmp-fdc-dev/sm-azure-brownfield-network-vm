@@ -1,3 +1,3 @@
 output "subnet_id_test" {
-  value = azurerm_subnet.test.id
+  value = data.azurerm_subnet.test.id
 }
